@@ -65,7 +65,6 @@ def index(request):
 		form = LinkForm(request.POST)
 		if form.is_valid():
 			link = form.cleaned_data['Url']
-			print(link)
 			output_key=recordLink(link)
 			form = LinkForm()
 			output_index = {'form':form, 'key': output_key, 'link':link,}
